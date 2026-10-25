@@ -7,8 +7,7 @@ UID:meera-dhiren-wedding-20270719@example.invalid
 DTSTAMP:20261025T000000Z
 DTSTART;VALUE=DATE:20270719
 DTEND;VALUE=DATE:20270720
-SUMMARY:Meera & Dhiren's Wedding🤍🧿💍
-LOCATION:Wrenbury Hall
+SUMMARY:Meera & Dhiren's Wedding
 DESCRIPTION:Please save the date for Meera & Dhiren's wedding.
 END:VEVENT
 END:VCALENDAR

@@ -30,7 +30,7 @@ h1 span{color:var(--gold)}
 }
 .arch:before{content:"";position:absolute;left:50%;top:10px;transform:translateX(-50%);width:26px;height:7px;border:1px solid #b9873f;border-radius:5px;background:linear-gradient(#fff1c5,#d3a04e)}
 .arch:after{content:"";position:absolute;left:17px;right:17px;bottom:13px;height:1px;background:#bd8e58}
-.arch span{position:relative;z-index:1;display:block;padding-top:30px;color:#a18d60;font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.arch span{position:relative;z-index:1;display:block;padding-top:31px;color:#a18d60;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase}
 .lights{display:flex;justify-content:center;align-items:center;gap:13px;margin:0 0 8px}
 .light{width:10px;height:10px;border:1px solid #a9763b;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff4c8,#d6a04d 75%);box-shadow:0 0 0 2px #f1e4c8}
 .machine-title{margin:0 0 9px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#8d9b82}
@@ -55,9 +55,8 @@ h1 span{color:var(--gold)}
 .lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:top center;transform:rotate(0deg);transition:transform .3s cubic-bezier(.2,.8,.3,1)}
 .lever-knob{position:absolute;left:10px;top:0;width:23px;height:23px;border:2px solid #b66d78;border-radius:50%;background:radial-gradient(circle at 30% 25%,#f5e4b5,#d1b878 57%,#9b8756);box-shadow:0 2px 3px #754d3644;transition:none}
 .lever-base{position:absolute;left:12px;top:127px;width:20px;height:28px;border:2px solid #9d733a;border-radius:3px;background:linear-gradient(#f5dfa1,#b7823e);box-shadow:inset 0 0 0 2px #e6c274;transition:transform .3s cubic-bezier(.2,.8,.3,1)}
-.lever-hit.pulled{transform:translateY(0)}
-.lever-hit.pulled .lever-shaft{transform:rotate(18deg)}
-.lever-hit.pulled .lever-knob{transform:translate(35px, 18px)}
+.lever-hit.pulled{transform:translateY(30px)}
+.lever-hit.pulled .lever-shaft{transform:rotate(0deg)}
 .lever-hit.pulled .lever-base{transform:translateY(0)}
 .spin-button{display:block;margin:28px auto 0;position:relative;z-index:2;border:1px solid #b58b4d;border-radius:999px;padding:13px 23px;background:linear-gradient(#fffdf5,#eee4c9);color:#66735f;font:bold .7rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #c7b082}
 .spin-button:active{transform:translateY(2px);box-shadow:0 2px 0 #c7b082}
@@ -67,7 +66,7 @@ h1 span{color:var(--gold)}
 .reveal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(67,78,62,.34);backdrop-filter:blur(5px)}
 .reveal.show{display:flex;animation:fadein .25s ease}
 .reveal-card{position:relative;width:min(100%,410px);max-height:92svh;overflow:auto;padding:30px 23px 24px;border:2px solid var(--gold);border-radius:16px;background:linear-gradient(145deg,#fffaf4,#f3d7d4);box-shadow:0 20px 70px #3c1e2466;text-align:center}
-.reveal-card:before{content:"🤍 🧿 💍";display:block;color:var(--gold);font-size:1.15rem;letter-spacing:.4em;margin-bottom:12px}
+.reveal-card:before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:1.15rem;letter-spacing:.4em;margin-bottom:12px}
 .reveal h2{font-weight:normal;font-size:clamp(2rem,8vw,2.8rem);line-height:1.05;margin:0;color:#899c80}
 .reveal .date{font-size:1.05rem;letter-spacing:.12em;margin:15px 0 9px;color:#a18a69}
 .reveal .message{font-style:italic;font-size:1rem;line-height:1.5;margin:0 0 18px}
@@ -89,8 +88,9 @@ h1 span{color:var(--gold)}
 </head>
 <body>
 <main class="page">
+  <p class="kicker">Together with their families</p>
   <h1>Meera <span>&amp;</span> Dhiren</h1>
-  <p class="subtitle">Start their new chapter</p>
+  <p class="subtitle">Our next chapter starts with you</p>
 
   <section class="machine-stage" aria-label="Interactive wedding slot machine">
     <div class="machine">
@@ -112,20 +112,21 @@ h1 span{color:var(--gold)}
     </div>
     <button class="spin-button" id="spin" type="button">Spin the reels ✦</button>
   </section>
-  <p class="hint">Forever has a nice 💍 to it🤍🧿</p>
+  <p class="hint">Three reels, two hearts, one forever.</p>
+  <p class="footer">Save the date · 19 July 2027</p>
 </main>
 
 <div class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="reveal-title">
   <div class="reveal-card">
     <h2 id="reveal-title">We're getting<br>married!</h2>
-    <p class="date">19 · july · 2027</p>
+    <p class="date">19 · JULY · 2027</p>
     <p class="message">Please save the date and celebrate<br>our forever with us.</p>
     <p style="letter-spacing:.13em;text-transform:uppercase;margin:0 0 17px">Meera &amp; Dhiren</p>
     <div class="calendar">
       <h3>Save our date to your calendar</h3>
       <p>Add our wedding date to your phone calendar.</p>
       <div class="calendar-links">
-        <a class="calendar-button" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding%F0%9F%A4%8D%F0%9F%A7%BF%F0%9F%92%8D&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.&amp;location=Wrenbury%20Hall">Google Calendar</a>
+        <a class="calendar-button" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.">Google Calendar</a>
         <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Apple / iPhone</a>
         <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Android / Save to Calendar</a>
       </div>
