@@ -23,7 +23,7 @@ body{
 h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0;color:#7b4d50}
 .subtitle{font-style:italic;font-size:1.05rem;margin:10px 0 20px;color:#9a6b6d}
 .machine{
-  position:relative;margin:0 auto;width:min(100%,410px);padding:25px 20px 23px;
+  position:relative;margin:0 auto;width:min(100%,300px);padding:25px 17px 20px;
   border:3px solid var(--gold);border-radius:32px 32px 24px 24px;
   background:linear-gradient(135deg,#f9e6e3 0%,#e9bfc0 42%,#f4d9d5 72%,#dca7aa 100%);
   box-shadow:inset 0 0 0 5px rgba(255,250,240,.55),inset 0 -12px 22px rgba(130,65,70,.12),0 15px 28px rgba(100,55,55,.18);
@@ -37,14 +37,14 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
 .crown:before{left:25px}.crown:after{right:25px}
 .crown span{display:block;padding-top:18px;color:#875d34;font-size:1.1rem;letter-spacing:.13em}
 .machine-title{font-size:clamp(1.1rem,4vw,1.4rem);letter-spacing:.14em;text-transform:uppercase;margin:8px 0 16px;color:#815157}
-.reels-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:10px;border-radius:17px;background:linear-gradient(#a77d46,#f4dda0 22%,#b18b50 48%,#f8e8b4 75%,#9a703b);box-shadow:inset 0 2px 6px #73502b,0 3px 0 rgba(255,255,255,.5)}
-.reel-window{height:154px;overflow:hidden;border:3px solid #d6b36c;border-radius:9px;background:#fffaf4;box-shadow:inset 0 0 10px #6e414433;position:relative}
+.reels-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:7px;border-radius:17px;background:linear-gradient(#a77d46,#f4dda0 22%,#b18b50 48%,#f8e8b4 75%,#9a703b);box-shadow:inset 0 2px 6px #73502b,0 3px 0 rgba(255,255,255,.5)}
+.reel-window{height:120px;overflow:hidden;border:3px solid #d6b36c;border-radius:9px;background:#fffaf4;box-shadow:inset 0 0 10px #6e414433;position:relative}
 .reel-window:after{content:"";position:absolute;inset:0;pointer-events:none;border:3px solid #fff5d7;border-radius:6px}
 .reel-strip{display:flex;flex-direction:column;transform:translateY(0);will-change:transform}
-.reel-item{height:148px;flex:0 0 148px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}
+.reel-item{height:114px;flex:0 0 114px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}
 .reel-item img{width:100%;height:100%;object-fit:cover;display:block}
-.machine-caption{font-size:.77rem;letter-spacing:.17em;text-transform:uppercase;margin:14px 0 4px;color:#86595a}
-.control-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:19px}.lever-wrap{position:relative;width:54px;height:92px;flex:none;cursor:pointer}.lever-button{position:absolute;right:4px;top:0;width:31px;height:31px;border-radius:50%;border:2px solid #986a30;background:radial-gradient(circle at 30% 25%,#fff5c7,#e2bd6b 48%,#a47533 85%);box-shadow:0 3px 5px #6b452c44;z-index:2}.lever-button:after{content:"";position:absolute;width:8px;height:62px;left:9px;top:22px;border:1px solid #986a30;border-radius:8px;background:linear-gradient(90deg,#9d6f32,#fff0b6,#b4863d);transform-origin:top center;transform:rotate(-7deg);transition:transform .25s;z-index:-1}.lever-wrap.pulled .lever-button:after{transform:rotate(25deg)}.lever-base{position:absolute;right:0;bottom:0;width:43px;height:21px;border:2px solid #a77c3e;border-radius:7px;background:linear-gradient(#f4d99a,#b78943)}.calendar{margin:26px auto 0;padding:17px 14px 16px;max-width:410px;border-top:1px solid #c49a5066}.calendar h2{font-size:20px;font-weight:normal;margin:0 0 7px}.calendar p{font-size:13px;line-height:1.5;margin:0 auto 13px;max-width:330px;color:#91666a}.calendar-links{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.calendar-button{border:1px solid #b38a49;border-radius:999px;padding:12px 15px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b;text-decoration:none;font:10px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;display:inline-block}
+.machine-caption{font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;margin:12px 0 10px;color:#86595a}.front-panel{height:56px;margin:15px 12px 0;border:2px solid var(--gold);border-radius:5px;background:linear-gradient(135deg,#f9e5e2,#e6b9bb 55%,#f6ddda);box-shadow:inset 0 0 0 3px #fff6df;display:flex;align-items:center;justify-content:center}.front-panel-button{width:22px;height:22px;border-radius:50%;border:2px solid #9f7439;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);box-shadow:0 2px 0 #936a36}
+.control-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:19px}
 .lever-button{
   appearance:none;border:0;cursor:pointer;position:relative;width:58px;height:58px;border-radius:50%;
   color:#6f4a28;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);
@@ -79,7 +79,7 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
 .confetti{position:fixed;top:-15px;width:8px;height:13px;z-index:9;pointer-events:none;animation:fall 2.8s linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(740deg);opacity:.1}}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
-@media(max-width:380px){.machine{padding:22px 13px 20px}.reels-wrap{gap:6px;padding:7px}.reel-window{height:130px}.reel-item{height:124px;flex-basis:124px}.control-row{gap:10px}.spin-button{padding:13px 12px}.lever-wrap{width:45px}}
+@media(max-width:380px){.machine{padding:22px 13px 20px}.reels-wrap{gap:6px;padding:7px}.reel-window{height:130px}.reel-item{height:124px;flex-basis:124px}.control-row{gap:10px}.spin-button{padding:13px 16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -89,7 +89,8 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
   <h1>Meera <span style="color:#c6a15b">&amp;</span> Dhiren</h1>
   <p class="subtitle">Our next chapter starts with you</p>
 
-  <section class="machine" aria-label="Interactive wedding slot machine">
+  <section class="machine-area" aria-label="Interactive wedding slot machine">
+   <div class="machine">
     <div class="crown"><span>♥  M &amp; D  ♥</span></div>
     <div class="machine-title">Love is in the reels</div>
     <div class="reels-wrap" aria-label="Three photo reels">
@@ -99,31 +100,30 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
     </div>
     <p class="machine-caption">Pull for a little wedding magic</p>
     <div class="control-row">
-      <button class="spin-button" id="spin">Pull the lever ✦</button>
-      <div class="lever-wrap" id="leverWrap" aria-label="Pull the slot machine lever">
-        <button class="lever-button" id="lever" aria-label="Pull the lever"></button>
-        <span class="lever-base"></span>
-      </div>
+      <button class="lever-button" id="lever" aria-label="Pull the lever">♥</button>
+      <button class="spin-button" id="spin">Spin the reels ✦</button>
     </div>
   </section>
   <p class="hint">Three reels, two hearts, one forever.</p>
-  <p class="footer">Save the date · 19 July 2027</p>
-  <section class="calendar">
-    <h2>Save our date to your calendar</h2>
-    <p>Add our wedding date to your phone calendar so you don't miss the celebration.</p>
-    <div class="calendar-links">
-      <a class="calendar-button" id="googleCalendar" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.">Add to Google Calendar</a>
-      <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Apple / iPhone calendar (.ics)</a>
-    </div>
-  </section>
+  <p class="footer">Save the date · 26 June 2027</p>
 </main>
 
 <div class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="reveal-title">
   <div class="reveal-card">
     <h2 id="reveal-title">We're getting<br>married!</h2>
-    <p class="date">19 · JULY · 2027</p>
+    <p class="date">26 · JUNE · 2027</p>
     <p class="message">Please save the date and celebrate<br>our forever with us.</p>
-    <p style="letter-spacing:.13em;text-transform:uppercase;margin:0 0 22px">Meera &amp; Dhiren</p>
+    <p style="letter-spacing:.13em;text-transform:uppercase;margin:0 0 17px">Meera &amp; Dhiren</p>
+    <div class="calendar">
+      <h3>Save our date to your calendar</h3>
+      <p>Add our wedding date to your phone calendar.</p>
+      <div class="calendar-links">
+        <a class="calendar-button" id="googleCalendar" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.">Google Calendar</a>
+        <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Apple / iPhone</a>
+        <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Android / Save to calendar</a>
+      </div>
+      <p class="calendar-note">On Android, the calendar file opens or downloads for import into a compatible calendar app. Websites cannot force every phone to open its native calendar directly.</p>
+    </div>
     <button class="replay" id="replay">Play again ✦</button>
   </div>
 </div>
@@ -138,7 +138,6 @@ const photos = [
 ];
 const strips = [...document.querySelectorAll(".reel-strip")];
 const lever = document.getElementById("lever");
-const leverWrap = document.getElementById("leverWrap");
 const spinButton = document.getElementById("spin");
 const reveal = document.getElementById("reveal");
 let busy = false;
@@ -151,19 +150,11 @@ function item(src, alt) {
   el.appendChild(img);
   return el;
 }
-function makeItem(src, alt) {
-  const el = document.createElement("div");
-  el.className = "reel-item";
-  const img = document.createElement("img");
-  img.src = src; img.alt = alt; img.loading = "eager";
-  el.appendChild(img);
-  return el;
-}
 function fillReels() {
-  // Show three different photos before the first spin.
   strips.forEach((strip, index) => {
     strip.innerHTML = "";
-    strip.appendChild(makeItem(photos[index], `Couple photo ${index+1}`));
+    const sequence = [...photos, ...photos, ...photos];
+    sequence.forEach((src, n) => strip.appendChild(item(src, `Couple photo ${n+1}`)));
     strip.style.transition = "none";
     strip.style.transform = "translateY(0px)";
   });
@@ -184,16 +175,12 @@ function confetti() {
 function spin() {
   if(busy) return;
   busy=true; reveal.classList.remove("show");
-  lever.disabled=true; spinButton.disabled=true; leverWrap.classList.add("pulled");
-  const winner = Math.floor(Math.random()*photos.length);
+  lever.disabled=true; spinButton.disabled=true;
   const itemHeight = strips[0].querySelector(".reel-item").getBoundingClientRect().height;
   strips.forEach((strip,index)=>{
-    strip.innerHTML = "";
-    const sequence = [];
-    for(let n=0;n<24;n++) sequence.push(photos[(n + index*2)%photos.length]);
-    const landing = 18 + index;
-    sequence[landing] = photos[winner];
-    sequence.forEach((src,n)=>strip.appendChild(makeItem(src, `Spinning couple photo ${n+1}`)));
+    const count = 12 + index*3 + Math.floor(Math.random()*4);
+    const maxIndex = photos.length*3 - 1;
+    const landing = Math.min(count, maxIndex);
     strip.style.transition="none";
     strip.style.transform="translateY(0px)";
     void strip.offsetHeight;
@@ -201,14 +188,13 @@ function spin() {
     strip.style.transform=`translateY(-${landing*itemHeight}px)`;
   });
   setTimeout(()=>{
-    busy=false; lever.disabled=false; spinButton.disabled=false; leverWrap.classList.remove("pulled");
+    busy=false; lever.disabled=false; spinButton.disabled=false;
     reveal.classList.add("show"); confetti();
-  },3000);
+  },2700);
 }
 lever.addEventListener("click",spin);
-leverWrap.addEventListener("click",e=>{if(e.target!==lever) spin();});
 spinButton.addEventListener("click",spin);
-document.getElementById("replay").addEventListener("click",()=>{reveal.classList.remove("show");fillReels();});
+document.getElementById("replay").addEventListener("click",()=>{reveal.classList.remove("show");});
 reveal.addEventListener("click",e=>{if(e.target===reveal) reveal.classList.remove("show");});
 document.addEventListener("keydown",e=>{if(e.key==="Escape") reveal.classList.remove("show");});
 fillReels();
