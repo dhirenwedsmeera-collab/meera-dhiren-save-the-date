@@ -23,7 +23,7 @@ body{
 h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0;color:#7b4d50}
 .subtitle{font-style:italic;font-size:1.05rem;margin:10px 0 20px;color:#9a6b6d}
 .machine{
-  position:relative;margin:0 auto;width:min(100%,300px);padding:25px 17px 20px;
+  position:relative;margin:0 auto;width:min(100%,286px);padding:25px 16px 18px;
   border:3px solid var(--gold);border-radius:32px 32px 24px 24px;
   background:linear-gradient(135deg,#f9e6e3 0%,#e9bfc0 42%,#f4d9d5 72%,#dca7aa 100%);
   box-shadow:inset 0 0 0 5px rgba(255,250,240,.55),inset 0 -12px 22px rgba(130,65,70,.12),0 15px 28px rgba(100,55,55,.18);
@@ -36,25 +36,26 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
 .crown:before,.crown:after{content:"✦";position:absolute;top:7px;color:#fff5d6;font-size:17px}
 .crown:before{left:25px}.crown:after{right:25px}
 .crown span{display:block;padding-top:18px;color:#875d34;font-size:1.1rem;letter-spacing:.13em}
-.machine-title{font-size:clamp(1.1rem,4vw,1.4rem);letter-spacing:.14em;text-transform:uppercase;margin:8px 0 16px;color:#815157}
+.machine-title{font-size:clamp(.95rem,3.6vw,1.2rem);letter-spacing:.11em;text-transform:uppercase;margin:8px 0 13px;color:#815157}
 .reels-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:7px;border-radius:17px;background:linear-gradient(#a77d46,#f4dda0 22%,#b18b50 48%,#f8e8b4 75%,#9a703b);box-shadow:inset 0 2px 6px #73502b,0 3px 0 rgba(255,255,255,.5)}
-.reel-window{height:120px;overflow:hidden;border:3px solid #d6b36c;border-radius:9px;background:#fffaf4;box-shadow:inset 0 0 10px #6e414433;position:relative}
+.reel-window{height:112px;overflow:hidden;border:3px solid #d6b36c;border-radius:9px;background:#fffaf4;box-shadow:inset 0 0 10px #6e414433;position:relative}
 .reel-window:after{content:"";position:absolute;inset:0;pointer-events:none;border:3px solid #fff5d7;border-radius:6px}
 .reel-strip{display:flex;flex-direction:column;transform:translateY(0);will-change:transform}
-.reel-item{height:114px;flex:0 0 114px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}
+.reel-item{height:106px;flex:0 0 106px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}
 .reel-item img{width:100%;height:100%;object-fit:cover;display:block}
-.machine-caption{font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;margin:12px 0 10px;color:#86595a}.front-panel{height:56px;margin:15px 12px 0;border:2px solid var(--gold);border-radius:5px;background:linear-gradient(135deg,#f9e5e2,#e6b9bb 55%,#f6ddda);box-shadow:inset 0 0 0 3px #fff6df;display:flex;align-items:center;justify-content:center}.front-panel-button{width:22px;height:22px;border-radius:50%;border:2px solid #9f7439;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);box-shadow:0 2px 0 #936a36}
-.control-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:19px}
+.machine-caption{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;margin:12px 0 10px;color:#86595a}.front-panel{height:61px;margin:14px 10px 0;border:2px solid var(--gold);border-radius:4px;background:linear-gradient(135deg,#f9e5e2,#e6b9bb 55%,#f6ddda);box-shadow:inset 0 0 0 3px #fff6df;display:flex;align-items:center;justify-content:center;position:relative}.front-panel:before{content:"";position:absolute;inset:6px;border:1px solid #c49a50;border-radius:2px}.front-panel-button{width:23px;height:23px;border-radius:50%;border:2px solid #9f7439;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);box-shadow:0 2px 0 #936a36;position:relative;z-index:1}
+.control-row{display:flex;align-items:center;justify-content:center;gap:0;margin-top:14px;position:relative}
 .lever-button{
-  appearance:none;border:0;cursor:pointer;position:relative;width:58px;height:58px;border-radius:50%;
-  color:#6f4a28;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);
-  box-shadow:0 4px 0 #936a36,0 7px 12px #754d3633,inset 0 2px 4px #fff7d8;
-  font-size:1.55rem;transition:transform .15s;
+  appearance:none;border:2px solid #9b302d;cursor:pointer;position:absolute;width:22px;height:22px;border-radius:50%;
+  color:transparent;background:radial-gradient(circle at 30% 25%,#ffaaa0,#d9483e 55%,#8e2826);
+  box-shadow:0 2px 4px #754d3633; font-size:0; transition:transform .2s; right:-35px;top:-68px;z-index:3;
 }
 .lever-button:active{transform:translateY(3px)}
-.lever-button:before{content:"";position:absolute;width:8px;height:28px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);left:25px;top:-22px;border-radius:5px;z-index:-1}
+.lever-button:before{content:"";position:absolute;width:6px;height:72px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);left:6px;top:14px;border:1px solid #986a30;border-radius:5px;transform-origin:top center;transform:rotate(-7deg);z-index:-1;transition:transform .25s}
+.lever-button:after{content:"";position:absolute;width:22px;height:28px;left:-2px;top:75px;border:2px solid #a77c3e;border-radius:6px;background:linear-gradient(#f4d99a,#b78943)}
+.lever-button.pulled:before{transform:rotate(24deg)}
 .spin-button{
-  border:1px solid #b38b4e;border-radius:999px;padding:14px 23px;background:linear-gradient(#fff8e8,#e9cf91);
+  margin-top:15px;border:1px solid #b38b4e;border-radius:999px;padding:14px 23px;background:linear-gradient(#fff8e8,#e9cf91);
   color:#70474b;font: bold .78rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
   box-shadow:0 4px 0 #b48b4e;transition:transform .15s;
 }
@@ -75,11 +76,19 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
 .reveal h2{font-weight:normal;font-size:clamp(2.1rem,8vw,3rem);line-height:1.05;margin:0;color:#7c4b50}
 .reveal .date{font-size:1.25rem;letter-spacing:.12em;margin:19px 0 10px;color:#986d39}
 .reveal .message{font-style:italic;font-size:1.05rem;line-height:1.5;margin:0 0 23px}
+
+.calendar{margin:17px auto 18px;padding:13px 0 0;border-top:1px solid #c6a15b66;max-width:350px}
+.calendar h3{font-size:1.05rem;font-weight:normal;margin:0 0 7px;color:#7c4b50}
+.calendar p{font-size:.82rem;line-height:1.45;margin:0 auto 12px;max-width:330px;color:#91666a}
+.calendar-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.calendar-button{display:inline-block;border:1px solid #b38b4e;border-radius:999px;padding:10px 12px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b!important;text-decoration:none!important;font:bold .66rem Georgia,serif;letter-spacing:.045em;text-transform:uppercase;box-shadow:0 2px 0 #b48b4e}
+.calendar-note{font-size:.68rem!important;margin-top:10px!important;color:#9b7778!important}
+
 .replay{border:1px solid var(--gold);background:#fff7e8;border-radius:999px;padding:12px 19px;color:#75484d;font: .8rem Georgia,serif;letter-spacing:.12em;text-transform:uppercase}
 .confetti{position:fixed;top:-15px;width:8px;height:13px;z-index:9;pointer-events:none;animation:fall 2.8s linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(740deg);opacity:.1}}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
-@media(max-width:380px){.machine{padding:22px 13px 20px}.reels-wrap{gap:6px;padding:7px}.reel-window{height:130px}.reel-item{height:124px;flex-basis:124px}.control-row{gap:10px}.spin-button{padding:13px 16px}}
+@media(max-width:420px){.machine{width:calc(100% - 12px);padding:22px 11px 16px}.reels-wrap{gap:4px;padding:5px}.reel-window{height:96px}.reel-item{height:90px;flex-basis:90px}.lever-button{right:-29px;top:-61px}.spin-button{padding:12px 17px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -100,18 +109,18 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
     </div>
     <p class="machine-caption">Pull for a little wedding magic</p>
     <div class="control-row">
-      <button class="lever-button" id="lever" aria-label="Pull the lever">♥</button>
+      <button class="lever-button" id="lever" aria-label="Pull the lever"> </button>
       <button class="spin-button" id="spin">Spin the reels ✦</button>
     </div>
   </section>
   <p class="hint">Three reels, two hearts, one forever.</p>
-  <p class="footer">Save the date · 26 June 2027</p>
+  <p class="footer">Save the date · 19 July 2027</p>
 </main>
 
 <div class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="reveal-title">
   <div class="reveal-card">
     <h2 id="reveal-title">We're getting<br>married!</h2>
-    <p class="date">26 · JUNE · 2027</p>
+    <p class="date">19 · JULY · 2027</p>
     <p class="message">Please save the date and celebrate<br>our forever with us.</p>
     <p style="letter-spacing:.13em;text-transform:uppercase;margin:0 0 17px">Meera &amp; Dhiren</p>
     <div class="calendar">
@@ -175,7 +184,7 @@ function confetti() {
 function spin() {
   if(busy) return;
   busy=true; reveal.classList.remove("show");
-  lever.disabled=true; spinButton.disabled=true;
+  lever.disabled=true; spinButton.disabled=true; lever.classList.add('pulled');
   const itemHeight = strips[0].querySelector(".reel-item").getBoundingClientRect().height;
   strips.forEach((strip,index)=>{
     const count = 12 + index*3 + Math.floor(Math.random()*4);
@@ -188,7 +197,7 @@ function spin() {
     strip.style.transform=`translateY(-${landing*itemHeight}px)`;
   });
   setTimeout(()=>{
-    busy=false; lever.disabled=false; spinButton.disabled=false;
+    busy=false; lever.disabled=false; spinButton.disabled=false; lever.classList.remove('pulled');
     reveal.classList.add("show"); confetti();
   },2700);
 }
