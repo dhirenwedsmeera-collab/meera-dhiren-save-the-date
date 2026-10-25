@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meera and Dhiren//Save the Date//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:meera-dhiren-wedding-20270719@save-the-date
+DTSTAMP:20261025T135500Z
+DTSTART;VALUE=DATE:20270719
+DTEND;VALUE=DATE:20270720
+SUMMARY:Meera & Dhiren's Wedding
+DESCRIPTION:Please save the date for Meera & Dhiren's wedding. We can't wait to celebrate with you!
+END:VEVENT
+END:VCALENDAR
