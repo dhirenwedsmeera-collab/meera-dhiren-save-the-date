@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e8c2c3">
+<title>Meera &amp; Dhiren — Save the Date</title>
+<style>
+:root{
+  --rose:#e8c2c3; --rose-deep:#c9858b; --rose-light:#f8e8e5;
+  --gold:#c6a15b; --gold-light:#f3df9b; --ink:#6e4146; --cream:#fffaf4;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100svh; color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  background:radial-gradient(ellipse at top,#fffaf6 0%,#f8e7e4 48%,#e9c5c4 100%);
+  display:flex; align-items:center; justify-content:center; padding:24px 14px 34px;
+  overflow-x:hidden;
+}
+.page{width:min(100%,560px);text-align:center;position:relative}
+.kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:#9b7650;margin:0 0 9px}
+h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0;color:#7b4d50}
+.subtitle{font-style:italic;font-size:1.05rem;margin:10px 0 20px;color:#9a6b6d}
+.machine{
+  position:relative;margin:0 auto;width:min(100%,410px);padding:25px 20px 23px;
+  border:3px solid var(--gold);border-radius:32px 32px 24px 24px;
+  background:linear-gradient(135deg,#f9e6e3 0%,#e9bfc0 42%,#f4d9d5 72%,#dca7aa 100%);
+  box-shadow:inset 0 0 0 5px rgba(255,250,240,.55),inset 0 -12px 22px rgba(130,65,70,.12),0 15px 28px rgba(100,55,55,.18);
+}
+.crown{
+  width:190px;max-width:70%;height:53px;margin:-49px auto 10px;position:relative;
+  border:2px solid var(--gold);border-bottom:0;border-radius:100px 100px 0 0;
+  background:linear-gradient(#f8e7c0,#c8a15a);box-shadow:0 -2px 0 #fff4d0 inset;
+}
+.crown:before,.crown:after{content:"✦";position:absolute;top:7px;color:#fff5d6;font-size:17px}
+.crown:before{left:25px}.crown:after{right:25px}
+.crown span{display:block;padding-top:18px;color:#875d34;font-size:1.1rem;letter-spacing:.13em}
+.machine-title{font-size:clamp(1.1rem,4vw,1.4rem);letter-spacing:.14em;text-transform:uppercase;margin:8px 0 16px;color:#815157}
+.reels-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:10px;border-radius:17px;background:linear-gradient(#a77d46,#f4dda0 22%,#b18b50 48%,#f8e8b4 75%,#9a703b);box-shadow:inset 0 2px 6px #73502b,0 3px 0 rgba(255,255,255,.5)}
+.reel-window{height:154px;overflow:hidden;border:3px solid #d6b36c;border-radius:9px;background:#fffaf4;box-shadow:inset 0 0 10px #6e414433;position:relative}
+.reel-window:after{content:"";position:absolute;inset:0;pointer-events:none;border:3px solid #fff5d7;border-radius:6px}
+.reel-strip{display:flex;flex-direction:column;transform:translateY(0);will-change:transform}
+.reel-item{height:148px;flex:0 0 148px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}
+.reel-item img{width:100%;height:100%;object-fit:cover;display:block}
+.machine-caption{font-size:.77rem;letter-spacing:.17em;text-transform:uppercase;margin:14px 0 4px;color:#86595a}
+.control-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:19px}
+.lever-button{
+  appearance:none;border:0;cursor:pointer;position:relative;width:58px;height:58px;border-radius:50%;
+  color:#6f4a28;background:radial-gradient(circle at 30% 25%,#fff1b7,#d0a653 55%,#986c31);
+  box-shadow:0 4px 0 #936a36,0 7px 12px #754d3633,inset 0 2px 4px #fff7d8;
+  font-size:1.55rem;transition:transform .15s;
+}
+.lever-button:active{transform:translateY(3px)}
+.lever-button:before{content:"";position:absolute;width:8px;height:28px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);left:25px;top:-22px;border-radius:5px;z-index:-1}
+.spin-button{
+  border:1px solid #b38b4e;border-radius:999px;padding:14px 23px;background:linear-gradient(#fff8e8,#e9cf91);
+  color:#70474b;font: bold .78rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
+  box-shadow:0 4px 0 #b48b4e;transition:transform .15s;
+}
+.spin-button:active{transform:translateY(3px);box-shadow:0 1px 0 #b48b4e}
+.spin-button:disabled,.lever-button:disabled{opacity:.65;cursor:wait}
+.hint{font-size:.88rem;font-style:italic;color:#96686a;margin:18px 0 0}
+.footer{font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;color:#9b7650;margin-top:20px}
+.reveal{
+  position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:22px;
+  background:rgba(74,42,44,.55);backdrop-filter:blur(5px)
+}
+.reveal.show{display:flex;animation:fadein .35s ease}
+.reveal-card{
+  position:relative;width:min(100%,420px);padding:35px 25px 29px;border:2px solid var(--gold);
+  border-radius:20px;background:linear-gradient(145deg,#fffaf3,#f4d8d4);box-shadow:0 20px 70px #3c1e2466;
+}
+.reveal-card:before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:1.35rem;letter-spacing:.4em;margin-bottom:16px}
+.reveal h2{font-weight:normal;font-size:clamp(2.1rem,8vw,3rem);line-height:1.05;margin:0;color:#7c4b50}
+.reveal .date{font-size:1.25rem;letter-spacing:.12em;margin:19px 0 10px;color:#986d39}
+.reveal .message{font-style:italic;font-size:1.05rem;line-height:1.5;margin:0 0 23px}
+.replay{border:1px solid var(--gold);background:#fff7e8;border-radius:999px;padding:12px 19px;color:#75484d;font: .8rem Georgia,serif;letter-spacing:.12em;text-transform:uppercase}
+.confetti{position:fixed;top:-15px;width:8px;height:13px;z-index:9;pointer-events:none;animation:fall 2.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(740deg);opacity:.1}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media(max-width:380px){.machine{padding:22px 13px 20px}.reels-wrap{gap:6px;padding:7px}.reel-window{height:130px}.reel-item{height:124px;flex-basis:124px}.control-row{gap:10px}.spin-button{padding:13px 16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="page">
+  <p class="kicker">A little bit of luck, a lifetime of love</p>
+  <h1>Meera <span style="color:#c6a15b">&amp;</span> Dhiren</h1>
+  <p class="subtitle">Our next chapter starts with you</p>
+
+  <section class="machine" aria-label="Interactive wedding slot machine">
+    <div class="crown"><span>♥  M &amp; D  ♥</span></div>
+    <div class="machine-title">Love is in the reels</div>
+    <div class="reels-wrap" aria-label="Three photo reels">
+      <div class="reel-window"><div class="reel-strip" data-reel="0"></div></div>
+      <div class="reel-window"><div class="reel-strip" data-reel="1"></div></div>
+      <div class="reel-window"><div class="reel-strip" data-reel="2"></div></div>
+    </div>
+    <p class="machine-caption">Pull for a little wedding magic</p>
+    <div class="control-row">
+      <button class="lever-button" id="lever" aria-label="Pull the lever">♥</button>
+      <button class="spin-button" id="spin">Spin the reels ✦</button>
+    </div>
+  </section>
+  <p class="hint">Three reels, two hearts, one forever.</p>
+  <p class="footer">Save the date · 26 June 2027</p>
+</main>
+
+<div class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="reveal-title">
+  <div class="reveal-card">
+    <h2 id="reveal-title">We're getting<br>married!</h2>
+    <p class="date">26 · JUNE · 2027</p>
+    <p class="message">Please save the date and celebrate<br>our forever with us.</p>
+    <p style="letter-spacing:.13em;text-transform:uppercase;margin:0 0 22px">Meera &amp; Dhiren</p>
+    <button class="replay" id="replay">Play again ✦</button>
+  </div>
+</div>
+<script>
+const photos = [
+  "assets/beach-dance.jpeg",
+  "assets/ring-selfie.jpeg",
+  "assets/walking-beach.jpeg",
+  "assets/sunset-kiss.jpeg",
+  "assets/couple-portrait.jpeg",
+  "assets/walking-away.jpeg"
+];
+const strips = [...document.querySelectorAll(".reel-strip")];
+const lever = document.getElementById("lever");
+const spinButton = document.getElementById("spin");
+const reveal = document.getElementById("reveal");
+let busy = false;
+
+function item(src, alt) {
+  const el = document.createElement("div");
+  el.className = "reel-item";
+  const img = document.createElement("img");
+  img.src = src; img.alt = alt; img.loading = "eager";
+  el.appendChild(img);
+  return el;
+}
+function fillReels() {
+  strips.forEach((strip, index) => {
+    strip.innerHTML = "";
+    const sequence = [...photos, ...photos, ...photos];
+    sequence.forEach((src, n) => strip.appendChild(item(src, `Couple photo ${n+1}`)));
+    strip.style.transition = "none";
+    strip.style.transform = "translateY(0px)";
+  });
+}
+function confetti() {
+  const colors = ["#c6a15b","#f7e4a5","#d99da3","#fff3dc","#b7787d"];
+  for(let i=0;i<75;i++){
+    const piece=document.createElement("i");
+    piece.className="confetti";
+    piece.style.left=Math.random()*100+"vw";
+    piece.style.background=colors[Math.floor(Math.random()*colors.length)];
+    piece.style.animationDelay=(Math.random()*.8)+"s";
+    piece.style.transform=`rotate(${Math.random()*360}deg)`;
+    document.body.appendChild(piece);
+    setTimeout(()=>piece.remove(),3800);
+  }
+}
+function spin() {
+  if(busy) return;
+  busy=true; reveal.classList.remove("show");
+  lever.disabled=true; spinButton.disabled=true;
+  const itemHeight = strips[0].querySelector(".reel-item").getBoundingClientRect().height;
+  strips.forEach((strip,index)=>{
+    const count = 12 + index*3 + Math.floor(Math.random()*4);
+    const maxIndex = photos.length*3 - 1;
+    const landing = Math.min(count, maxIndex);
+    strip.style.transition="none";
+    strip.style.transform="translateY(0px)";
+    void strip.offsetHeight;
+    strip.style.transition=`transform ${1.5+index*.48}s cubic-bezier(.12,.72,.16,1)`;
+    strip.style.transform=`translateY(-${landing*itemHeight}px)`;
+  });
+  setTimeout(()=>{
+    busy=false; lever.disabled=false; spinButton.disabled=false;
+    reveal.classList.add("show"); confetti();
+  },2700);
+}
+lever.addEventListener("click",spin);
+spinButton.addEventListener("click",spin);
+document.getElementById("replay").addEventListener("click",()=>{reveal.classList.remove("show");});
+reveal.addEventListener("click",e=>{if(e.target===reveal) reveal.classList.remove("show");});
+document.addEventListener("keydown",e=>{if(e.key==="Escape") reveal.classList.remove("show");});
+fillReels();
+</script>
+</body>
+</html>
