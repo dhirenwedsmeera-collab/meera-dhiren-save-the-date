@@ -24,12 +24,27 @@ h1{font-size:clamp(2.1rem,8vw,3rem);font-weight:normal;line-height:1;margin:0;co
 .machine-caption{font-size:.45rem;letter-spacing:.12em;text-transform:uppercase;margin:8px 0 7px;color:#98696a}
 .machine-controls{height:18px;display:flex;align-items:center;justify-content:center;gap:7px;margin:3px 0 8px}.mini-control{height:9px;width:25px;border-radius:8px;border:1px solid #a87b54;background:linear-gradient(#fff0c6,#c58b4d);box-shadow:0 1px 0 #fff0d4}.mini-light{height:8px;width:8px;border-radius:50%;border:1px solid #9d6b43;background:#e9b7a5;box-shadow:inset 0 0 0 2px #f7dfb2}
 .front-panel{height:57px;margin:0 4px;border:2px solid #a87837;border-radius:4px;background:linear-gradient(90deg,#d99b98,#f3c9c6 48%,#df9f9f);box-shadow:inset 0 0 0 3px #f7e6bd,inset 0 0 0 5px #d9aa5b;display:flex;align-items:center;justify-content:center;position:relative}.front-panel:before{content:"";position:absolute;inset:6px;border:1px solid #f7e4bd}.front-panel-button{width:24px;height:24px;border-radius:50%;border:2px solid #a87837;background:radial-gradient(circle at 30% 25%,#fff2bf,#d6a34f 55%,#986c32);box-shadow:0 2px 0 #986c32;position:relative;z-index:1}
-.control-row{height:0;position:relative;margin:0}.lever-button{appearance:none;border:2px solid #a62e2c;cursor:pointer;position:absolute;width:18px;height:18px;border-radius:50%;color:transparent;background:radial-gradient(circle at 30% 25%,#ffaaa0,#d9483e 55%,#8e2826);box-shadow:0 2px 3px #754d3633;font-size:0;right:-27px;top:-103px;z-index:4;transition:top .28s cubic-bezier(.2,.8,.3,1)}
-.lever-button:before{content:"";position:absolute;width:4px;height:70px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);left:5px;top:11px;border:1px solid #986a30;border-radius:4px;transform-origin:top center;transform:rotate(0deg);z-index:-1;transition:transform .28s cubic-bezier(.2,.8,.3,1)}
-.lever-button:after{content:"";position:absolute;width:17px;height:22px;left:-2px;top:72px;border:2px solid #a77c3e;border-radius:3px;background:linear-gradient(#f4d99a,#b78943)}.lever-button:active,.lever-button.pulled{top:-65px}
-.spin-button{margin-top:17px;border:1px solid #b38b4e;border-radius:999px;padding:12px 20px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b;font:bold .65rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 3px 0 #b48b4e;transition:transform .15s}
+.control-row{height:0;position:relative;margin:0}
+.lever-button{
+  appearance:none;border:0;cursor:pointer;position:absolute;width:38px;height:112px;
+  color:transparent;background:transparent;font-size:0;right:-33px;top:-111px;z-index:8;
+  padding:0;overflow:visible;transition:top .28s cubic-bezier(.2,.8,.3,1);
+}
+.lever-button:before{
+  content:"";position:absolute;width:5px;height:70px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);
+  left:16px;top:20px;border:1px solid #986a30;border-radius:4px;transform-origin:top center;
+  transform:rotate(0deg);z-index:1;transition:transform .28s cubic-bezier(.2,.8,.3,1);
+}
+.lever-button:after{
+  content:"";position:absolute;width:18px;height:18px;left:10px;top:10px;border:2px solid #a62e2c;border-radius:50%;
+  background:radial-gradient(circle at 30% 25%,#ffaaa0,#d9483e 55%,#8e2826);box-shadow:0 2px 3px #754d3633;
+  z-index:2;
+}
+.lever-button:active,.lever-button.pulled{top:-73px}
+.lever-button:active:before,.lever-button.pulled:before{transform:rotate(0deg)}
+.spin-button{display:block;position:relative;z-index:2;margin:24px auto 0;border:1px solid #b38b4e;border-radius:999px;padding:12px 20px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b;font:bold .65rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 3px 0 #b48b4e;transition:transform .15s}
 .spin-button:active{transform:translateY(3px);box-shadow:0 1px 0 #b48b4e}.spin-button:disabled,.lever-button:disabled{opacity:.65;cursor:wait}
-.hint{font-size:.67rem;font-style:italic;color:#b28a89;margin:20px 0 0;letter-spacing:.02em}.footer{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:#bd9290;margin-top:17px}
+.hint{font-size:.67rem;font-style:italic;color:#b28a89;margin:24px 0 0;letter-spacing:.02em;line-height:1.5}.footer{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:#bd9290;margin-top:17px;line-height:1.6}
 .reveal{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(74,42,44,.55);backdrop-filter:blur(5px)}.reveal.show{display:flex;animation:fadein .35s ease}
 .reveal-card{position:relative;width:min(100%,390px);max-height:90svh;overflow:auto;padding:28px 22px 23px;border:2px solid var(--gold);border-radius:14px;background:linear-gradient(145deg,#fffaf3,#f4d8d4);box-shadow:0 20px 70px #3c1e2466}.reveal-card:before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:1.15rem;letter-spacing:.4em;margin-bottom:12px}
 .reveal h2{font-weight:normal;font-size:clamp(2rem,8vw,2.6rem);line-height:1.05;margin:0;color:#bd8586}.reveal .date{font-size:1rem;letter-spacing:.12em;margin:15px 0 9px;color:#986d39}.reveal .message{font-style:italic;font-size:.95rem;line-height:1.5;margin:0 0 18px}
@@ -61,7 +76,7 @@ h1{font-size:clamp(2.1rem,8vw,3rem);font-weight:normal;line-height:1;margin:0;co
      <div class="machine-controls" aria-hidden="true"><span class="mini-light"></span><span class="mini-control"></span><span class="mini-light"></span></div>
      <div class="front-panel" aria-hidden="true"><span class="front-panel-button"></span></div>
      <div class="control-row">
-      <button class="lever-button" id="lever" aria-label="Pull the lever"> </button>
+      <button class="lever-button" id="lever" aria-label="Pull the lever" title="Pull the lever down"> </button>
       <button class="spin-button" id="spin">Spin the reels ✦</button>
     </div>
   </section>
@@ -117,7 +132,8 @@ function fillReels() {
     const sequence = [...photos, ...photos, ...photos];
     sequence.forEach((src, n) => strip.appendChild(item(src, `Couple photo ${n+1}`)));
     strip.style.transition = "none";
-    strip.style.transform = "translateY(0px)";
+    const itemHeight = 72;
+    strip.style.transform = `translateY(-${index * itemHeight}px)`;
   });
 }
 function confetti() {
@@ -142,8 +158,9 @@ function spin() {
     const count = 12 + index*3 + Math.floor(Math.random()*4);
     const maxIndex = photos.length*3 - 1;
     const landing = Math.min(count, maxIndex);
+    const initialOffset = index * itemHeight;
     strip.style.transition="none";
-    strip.style.transform="translateY(0px)";
+    strip.style.transform=`translateY(-${initialOffset}px)`;
     void strip.offsetHeight;
     strip.style.transition=`transform ${1.5+index*.48}s cubic-bezier(.12,.72,.16,1)`;
     strip.style.transform=`translateY(-${landing*itemHeight}px)`;
