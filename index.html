@@ -50,12 +50,14 @@ h1 span{color:var(--gold)}
 .machine-foot{height:9px;width:calc(100% + 14px);margin:0 -7px;border:1px solid #ad7b3e;border-radius:0 0 4px 4px;background:linear-gradient(#f4d59a,#bd8647);box-shadow:0 3px 0 #d8a5a1}
 .lever-hit{
  appearance:none;position:absolute;right:-24px;top:100px;width:42px;height:176px;padding:0;border:0;background:transparent;cursor:pointer;z-index:8;
+ transform:translateY(0);transform-origin:top center;transition:transform .28s cubic-bezier(.2,.8,.3,1);
 }
-.lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:top center;transition:transform .22s ease}
-.lever-knob{position:absolute;left:10px;top:0;width:23px;height:23px;border:2px solid #9d2929;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffb0a4,#dc4b43 57%,#8c2928);box-shadow:0 2px 3px #754d3644;transition:transform .22s ease}
-.lever-base{position:absolute;left:12px;top:127px;width:20px;height:28px;border:2px solid #9d733a;border-radius:3px;background:linear-gradient(#f5dfa1,#b7823e);box-shadow:inset 0 0 0 2px #e6c274}
-.lever-hit.pulled .lever-shaft{transform:scaleY(1.24)}
-.lever-hit.pulled .lever-knob{transform:translateY(31px)}
+.lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:top center;transform:rotate(0deg);transition:transform .3s cubic-bezier(.2,.8,.3,1)}
+.lever-knob{position:absolute;left:10px;top:0;width:23px;height:23px;border:2px solid #9d2929;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffb0a4,#dc4b43 57%,#8c2928);box-shadow:0 2px 3px #754d3644;transition:none}
+.lever-base{position:absolute;left:12px;top:127px;width:20px;height:28px;border:2px solid #9d733a;border-radius:3px;background:linear-gradient(#f5dfa1,#b7823e);box-shadow:inset 0 0 0 2px #e6c274;transition:transform .3s cubic-bezier(.2,.8,.3,1)}
+.lever-hit.pulled{transform:translateY(27px)}
+.lever-hit.pulled .lever-shaft{transform:rotate(-7deg)}
+.lever-hit.pulled .lever-base{transform:translateY(-8px)}
 .spin-button{display:block;margin:28px auto 0;position:relative;z-index:2;border:1px solid #b58b4d;border-radius:999px;padding:13px 23px;background:linear-gradient(#fff8e6,#e9ce8c);color:#70474b;font:bold .7rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #b48b4e}
 .spin-button:active{transform:translateY(2px);box-shadow:0 2px 0 #b48b4e}
 .spin-button:disabled,.lever-hit:disabled{opacity:.65;cursor:wait}
