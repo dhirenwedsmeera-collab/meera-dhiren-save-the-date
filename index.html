@@ -3,82 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e8c2c3">
+<meta name="theme-color" content="#f4d9d7">
 <title>Meera &amp; Dhiren — Save the Date</title>
 <style>
-
-:root{--pink:#f8e9e8;--pink2:#f2d1cf;--pink3:#e9aaa8;--rose:#c77e83;--gold:#d5a65a;--gold2:#f5df9b;--gold-dark:#a87837;--ink:#87575a;--cream:#fff9f3}
-*{box-sizing:border-box}html{min-height:100%;background:var(--pink)}
-body{margin:0;min-height:100svh;padding:32px 16px 28px;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at 50% 18%,rgba(255,255,255,.95),rgba(255,255,255,0) 54%),linear-gradient(180deg,#fff8f6 0%,#f9e9e7 58%,#f4dedd 100%);display:flex;align-items:center;justify-content:center;overflow-x:hidden}
-.page{width:min(100%,430px);text-align:center;position:relative}.kicker{font-size:.58rem;letter-spacing:.29em;text-transform:uppercase;color:#bd9290;margin:0 0 13px}
-h1{font-size:clamp(2.1rem,8vw,3rem);font-weight:normal;line-height:1;margin:0;color:#bd8586;letter-spacing:.02em}.subtitle{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin:11px 0 22px;color:#b58c8a}
-.machine-area{width:100%;position:relative;margin:0 auto}
-.machine{position:relative;margin:0 auto;width:min(100%,248px);padding:17px 17px 15px;border:2px solid var(--gold);border-radius:12px 12px 7px 7px;background:linear-gradient(90deg,#d99898 0%,#f2c9c7 10%,#f5d7d3 50%,#e7b2b1 92%,#cf898b 100%);box-shadow:inset 0 0 0 3px #fff0d8,inset 0 -5px 9px #b86e7330,0 7px 0 #d9a6a3,0 12px 20px #9b6b6b22}
-.machine:before{content:"";position:absolute;left:7px;right:7px;top:7px;bottom:7px;border:1px solid #f7e4bd;pointer-events:none;border-radius:6px}
-.crown{position:relative;width:160px;max-width:100%;height:65px;margin:-30px auto 8px;border:2px solid var(--gold-dark);border-bottom:0;border-radius:95px 95px 0 0;background:linear-gradient(90deg,#d99b99,#f6d2cb 48%,#d99294);box-shadow:inset 0 0 0 3px #f7e7c7,inset 0 0 0 5px #e4b75f;clip-path:polygon(0 100%,0 44%,9% 44%,9% 24%,20% 24%,20% 12%,31% 12%,31% 3%,50% 3%,69% 3%,69% 12%,80% 12%,80% 24%,91% 24%,91% 44%,100% 44%,100% 100%)}
-.crown:before,.crown:after{content:"✦";position:absolute;top:12px;color:#fff1c4;font-size:12px}.crown:before{left:19px}.crown:after{right:19px}.crown span{display:block;padding-top:27px;color:#9e6c45;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase}
-.machine-title{font-size:.6rem;letter-spacing:.19em;text-transform:uppercase;margin:0 0 9px;color:#9a6666}
-.reels-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:5px;border:2px solid #a97443;border-radius:5px;background:linear-gradient(180deg,#8b6553,#f6d98b 18%,#c28a4b 50%,#f8e2a6 78%,#98693e);box-shadow:inset 0 1px 4px #64442f,0 2px 0 #fff0c5}
-.reel-window{height:76px;overflow:hidden;border:2px solid #8c6962;border-radius:2px;background:#fff9f2;position:relative;box-shadow:inset 0 0 5px #6e414433}.reel-window:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid #f8e4b4}
-.reel-strip{display:flex;flex-direction:column;transform:translateY(0);will-change:transform}.reel-item{height:72px;flex:0 0 72px;display:flex;align-items:center;justify-content:center;background:#fff8ef;overflow:hidden}.reel-item img{width:100%;height:100%;object-fit:cover;display:block}
-.machine-caption{font-size:.45rem;letter-spacing:.12em;text-transform:uppercase;margin:8px 0 7px;color:#98696a}
-.machine-controls{height:18px;display:flex;align-items:center;justify-content:center;gap:7px;margin:3px 0 8px}.mini-control{height:9px;width:25px;border-radius:8px;border:1px solid #a87b54;background:linear-gradient(#fff0c6,#c58b4d);box-shadow:0 1px 0 #fff0d4}.mini-light{height:8px;width:8px;border-radius:50%;border:1px solid #9d6b43;background:#e9b7a5;box-shadow:inset 0 0 0 2px #f7dfb2}
-.front-panel{height:57px;margin:0 4px;border:2px solid #a87837;border-radius:4px;background:linear-gradient(90deg,#d99b98,#f3c9c6 48%,#df9f9f);box-shadow:inset 0 0 0 3px #f7e6bd,inset 0 0 0 5px #d9aa5b;display:flex;align-items:center;justify-content:center;position:relative}.front-panel:before{content:"";position:absolute;inset:6px;border:1px solid #f7e4bd}.front-panel-button{width:24px;height:24px;border-radius:50%;border:2px solid #a87837;background:radial-gradient(circle at 30% 25%,#fff2bf,#d6a34f 55%,#986c32);box-shadow:0 2px 0 #986c32;position:relative;z-index:1}
-.control-row{height:0;position:relative;margin:0}
-.lever-button{
-  appearance:none;border:0;cursor:pointer;position:absolute;width:38px;height:112px;
-  color:transparent;background:transparent;font-size:0;right:-33px;top:-111px;z-index:8;
-  padding:0;overflow:visible;transition:top .28s cubic-bezier(.2,.8,.3,1);
+:root{--blush:#f5dedd;--pink:#e9b8b8;--pink-dark:#d58f92;--gold:#c99a4e;--gold-light:#f7e5ad;--gold-deep:#956b35;--ink:#815458;--cream:#fff8ef}
+*{box-sizing:border-box}
+html{min-height:100%;background:#f7e4e2}
+body{margin:0;min-height:100svh;padding:34px 16px 30px;display:flex;align-items:center;justify-content:center;overflow-x:hidden;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at 50% 12%,#fffdfa 0%,#fbefed 42%,#f0d0d0 100%)}
+.page{width:min(100%,470px);text-align:center}
+.kicker{margin:0 0 12px;color:#ad8584;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase}
+h1{margin:0;color:#bb8184;font-size:clamp(2.25rem,8vw,3.3rem);font-weight:normal;line-height:1.04}
+h1 span{color:var(--gold)}
+.subtitle{margin:12px 0 35px;color:#a87d7f;font-size:.74rem;letter-spacing:.15em;text-transform:uppercase}
+.machine-stage{position:relative;width:min(100%,320px);margin:0 auto}
+.machine{
+ position:relative;width:100%;padding:18px 21px 17px;border:2px solid var(--gold);border-radius:17px 17px 9px 9px;
+ background:linear-gradient(90deg,#d99195 0%,#f2c9c7 9%,#f6d9d5 50%,#efc5c3 90%,#cf898c 100%);
+ box-shadow:inset 0 0 0 4px #fff0d2,inset 0 0 0 6px #e1b45f,0 7px 0 #d9a5a2,0 13px 25px #8c555522;
 }
-.lever-button:before{
-  content:"";position:absolute;width:5px;height:70px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);
-  left:16px;top:20px;border:1px solid #986a30;border-radius:4px;transform-origin:top center;
-  transform:rotate(0deg);z-index:1;transition:transform .28s cubic-bezier(.2,.8,.3,1);
+.machine:after{content:"";position:absolute;inset:9px;border:1px solid #f8e7c3;border-radius:8px;pointer-events:none}
+.arch{
+ position:relative;width:204px;height:88px;max-width:100%;margin:-36px auto 8px;
+ border:3px solid var(--gold);border-bottom-width:4px;border-radius:110px 110px 4px 4px;
+ background:linear-gradient(110deg,#e9b5b4,#f8d9d4 52%,#e4a8a9);
+ box-shadow:inset 0 0 0 3px #f7e7c1,inset 0 0 0 6px #dca85b,0 2px 0 #fff0ce;
 }
-.lever-button:after{
-  content:"";position:absolute;width:18px;height:18px;left:10px;top:10px;border:2px solid #a62e2c;border-radius:50%;
-  background:radial-gradient(circle at 30% 25%,#ffaaa0,#d9483e 55%,#8e2826);box-shadow:0 2px 3px #754d3633;
-  z-index:2;
+.arch:before{content:"";position:absolute;left:50%;top:10px;transform:translateX(-50%);width:26px;height:7px;border:1px solid #b9873f;border-radius:5px;background:linear-gradient(#fff1c5,#d3a04e)}
+.arch:after{content:"";position:absolute;left:17px;right:17px;bottom:13px;height:1px;background:#bd8e58}
+.arch span{position:relative;z-index:1;display:block;padding-top:31px;color:#9a6b43;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase}
+.lights{display:flex;justify-content:center;align-items:center;gap:13px;margin:0 0 8px}
+.light{width:10px;height:10px;border:1px solid #a9763b;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff4c8,#d6a04d 75%);box-shadow:0 0 0 2px #f4d8a0}
+.machine-title{margin:0 0 9px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#9c696b}
+.reels-frame{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:7px;border:3px solid #9d7040;border-radius:5px;background:linear-gradient(180deg,#f7e1a0,#a87640 17%,#f4d78c 50%,#9b6b39 85%,#f4dfa0);box-shadow:inset 0 0 0 2px #fff0c8,0 3px 0 #b88046}
+.reel-window{height:90px;overflow:hidden;border:2px solid #8e6b60;background:#fff8ef;border-radius:2px;position:relative;box-shadow:inset 0 0 5px #4e2d2d33}
+.reel-window:after{content:"";position:absolute;inset:0;border:1px solid #fff0c4;pointer-events:none}
+.reel-strip{display:flex;flex-direction:column;will-change:transform}
+.reel-item{height:86px;flex:0 0 86px;overflow:hidden;background:#fff8ef}
+.reel-item img{display:block;width:100%;height:100%;object-fit:cover}
+.caption{margin:9px 0 6px;color:#98696a;font-size:.5rem;letter-spacing:.15em;text-transform:uppercase}
+.mini-controls{display:flex;align-items:center;justify-content:center;gap:8px;height:17px;margin:0 0 6px}
+.mini-pill{width:25px;height:9px;border:1px solid #9e733f;border-radius:8px;background:linear-gradient(#fff1c6,#d3a053);box-shadow:0 1px 0 #fff0c9}
+.mini-dot{width:7px;height:7px;border:1px solid #a77b40;border-radius:50%;background:#f5d99a}
+.front-panel{height:70px;margin:0 4px;border:2px solid #a77739;border-radius:5px;background:linear-gradient(90deg,#d99798,#f1c7c5 50%,#d99798);box-shadow:inset 0 0 0 3px #f8e8c1,inset 0 0 0 6px #d8a856;display:flex;align-items:center;justify-content:center;position:relative}
+.front-panel:before{content:"";position:absolute;inset:8px;border:1px solid #f6e5be}
+.gold-button{position:relative;z-index:1;width:28px;height:28px;border:2px solid #9c6c31;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff2bc,#d4a14f 58%,#95682e);box-shadow:0 2px 0 #986b31, inset 0 0 0 2px #e8c477}
+.machine-foot{height:9px;width:calc(100% + 14px);margin:0 -7px;border:1px solid #ad7b3e;border-radius:0 0 4px 4px;background:linear-gradient(#f4d59a,#bd8647);box-shadow:0 3px 0 #d8a5a1}
+.lever-hit{
+ appearance:none;position:absolute;right:-24px;top:100px;width:42px;height:176px;padding:0;border:0;background:transparent;cursor:pointer;z-index:8;
 }
-.lever-button:active,.lever-button.pulled{top:-73px}
-.lever-button:active:before,.lever-button.pulled:before{transform:rotate(0deg)}
-.spin-button{display:block;position:relative;z-index:2;margin:24px auto 0;border:1px solid #b38b4e;border-radius:999px;padding:12px 20px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b;font:bold .65rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 3px 0 #b48b4e;transition:transform .15s}
-.spin-button:active{transform:translateY(3px);box-shadow:0 1px 0 #b48b4e}.spin-button:disabled,.lever-button:disabled{opacity:.65;cursor:wait}
-.hint{font-size:.67rem;font-style:italic;color:#b28a89;margin:24px 0 0;letter-spacing:.02em;line-height:1.5}.footer{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:#bd9290;margin-top:17px;line-height:1.6}
-.reveal{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(74,42,44,.55);backdrop-filter:blur(5px)}.reveal.show{display:flex;animation:fadein .35s ease}
-.reveal-card{position:relative;width:min(100%,390px);max-height:90svh;overflow:auto;padding:28px 22px 23px;border:2px solid var(--gold);border-radius:14px;background:linear-gradient(145deg,#fffaf3,#f4d8d4);box-shadow:0 20px 70px #3c1e2466}.reveal-card:before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:1.15rem;letter-spacing:.4em;margin-bottom:12px}
-.reveal h2{font-weight:normal;font-size:clamp(2rem,8vw,2.6rem);line-height:1.05;margin:0;color:#bd8586}.reveal .date{font-size:1rem;letter-spacing:.12em;margin:15px 0 9px;color:#986d39}.reveal .message{font-style:italic;font-size:.95rem;line-height:1.5;margin:0 0 18px}
-.calendar{margin:14px auto 16px;padding:12px 0 0;border-top:1px solid #c6a15b66;max-width:350px}.calendar h3{font-size:.95rem;font-weight:normal;margin:0 0 7px;color:#7c4b50}.calendar p{font-size:.76rem;line-height:1.45;margin:0 auto 10px;max-width:330px;color:#91666a}.calendar-links{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
-.calendar-button{display:inline-block;border:1px solid #b38b4e;border-radius:999px;padding:9px 10px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b!important;text-decoration:none!important;font:bold .6rem Georgia,serif;letter-spacing:.035em;text-transform:uppercase;box-shadow:0 2px 0 #b48b4e}.calendar-note{font-size:.62rem!important;margin-top:9px!important;color:#9b7778!important}
-.replay{border:1px solid var(--gold);background:#fff7e8;border-radius:999px;padding:11px 17px;color:#75484d;font:.75rem Georgia,serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.confetti{position:fixed;top:-15px;width:7px;height:11px;z-index:9;pointer-events:none;animation:fall 2.8s linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(740deg);opacity:.1}}@keyframes fadein{from{opacity:0}to{opacity:1}}
-@media(max-width:380px){body{padding:28px 12px}.machine{width:min(100%,224px);padding:15px 14px 13px}.reel-window{height:68px}.reel-item{height:64px;flex-basis:64px}.lever-button{right:-23px}.page{width:100%}}
+.lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:top center;transition:transform .22s ease}
+.lever-knob{position:absolute;left:10px;top:0;width:23px;height:23px;border:2px solid #9d2929;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffb0a4,#dc4b43 57%,#8c2928);box-shadow:0 2px 3px #754d3644;transition:transform .22s ease}
+.lever-base{position:absolute;left:12px;top:127px;width:20px;height:28px;border:2px solid #9d733a;border-radius:3px;background:linear-gradient(#f5dfa1,#b7823e);box-shadow:inset 0 0 0 2px #e6c274}
+.lever-hit.pulled .lever-shaft{transform:scaleY(1.24)}
+.lever-hit.pulled .lever-knob{transform:translateY(31px)}
+.spin-button{display:block;margin:28px auto 0;position:relative;z-index:2;border:1px solid #b58b4d;border-radius:999px;padding:13px 23px;background:linear-gradient(#fff8e6,#e9ce8c);color:#70474b;font:bold .7rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #b48b4e}
+.spin-button:active{transform:translateY(2px);box-shadow:0 2px 0 #b48b4e}
+.spin-button:disabled,.lever-hit:disabled{opacity:.65;cursor:wait}
+.hint{margin:27px 0 0;color:#a77f80;font-size:.78rem;font-style:italic;line-height:1.5}
+.footer{margin-top:17px;color:#b28d8c;font-size:.57rem;letter-spacing:.19em;text-transform:uppercase;line-height:1.7}
+.reveal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(68,42,43,.52);backdrop-filter:blur(5px)}
+.reveal.show{display:flex;animation:fadein .25s ease}
+.reveal-card{position:relative;width:min(100%,410px);max-height:92svh;overflow:auto;padding:30px 23px 24px;border:2px solid var(--gold);border-radius:16px;background:linear-gradient(145deg,#fffaf4,#f3d7d4);box-shadow:0 20px 70px #3c1e2466;text-align:center}
+.reveal-card:before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:1.15rem;letter-spacing:.4em;margin-bottom:12px}
+.reveal h2{font-weight:normal;font-size:clamp(2rem,8vw,2.8rem);line-height:1.05;margin:0;color:#bd8586}
+.reveal .date{font-size:1.05rem;letter-spacing:.12em;margin:15px 0 9px;color:#986d39}
+.reveal .message{font-style:italic;font-size:1rem;line-height:1.5;margin:0 0 18px}
+.calendar{margin:15px auto 16px;padding:13px 0 0;border-top:1px solid #c6a15b66;max-width:350px}
+.calendar h3{font-size:1rem;font-weight:normal;margin:0 0 7px;color:#7c4b50}
+.calendar p{font-size:.78rem;line-height:1.45;margin:0 auto 11px;max-width:330px;color:#91666a}
+.calendar-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.calendar-button{display:inline-block;border:1px solid #b38b4e;border-radius:999px;padding:10px 12px;background:linear-gradient(#fff8e8,#e9cf91);color:#70474b!important;text-decoration:none!important;font:bold .64rem Georgia,serif;letter-spacing:.035em;text-transform:uppercase;box-shadow:0 2px 0 #b48b4e}
+.calendar-note{font-size:.64rem!important;margin-top:10px!important;color:#9b7778!important}
+.replay{border:1px solid var(--gold);background:#fff7e8;border-radius:999px;padding:12px 18px;color:#75484d;font:.78rem Georgia,serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.confetti{position:fixed;top:-15px;width:7px;height:11px;z-index:1100;pointer-events:none;animation:fall 2.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(740deg);opacity:.1}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media(max-width:430px){
+ body{padding:27px 15px}.subtitle{margin-bottom:30px}.machine-stage{width:min(100%,292px)}.machine{padding:17px 17px 15px}.arch{width:190px}.reel-window{height:78px}.reel-item{height:74px;flex-basis:74px}.lever-hit{right:-22px;top:97px}.spin-button{margin-top:26px}.hint{margin-top:25px}
+}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-
 </style>
 </head>
 <body>
 <main class="page">
-  <p class="kicker">A little bit of luck, a lifetime of love</p>
-  <h1>Meera <span style="color:#c6a15b">&amp;</span> Dhiren</h1>
+  <p class="kicker">Together with their families</p>
+  <h1>Meera <span>&amp;</span> Dhiren</h1>
   <p class="subtitle">Our next chapter starts with you</p>
 
-  <section class="machine-area" aria-label="Interactive wedding slot machine">
-   <div class="machine">
-    <div class="crown"><span>♥  M &amp; D  ♥</span></div>
-    <div class="machine-title">Save the date</div>
-    <div class="reels-wrap" aria-label="Three photo reels">
-      <div class="reel-window"><div class="reel-strip" data-reel="0"></div></div>
-      <div class="reel-window"><div class="reel-strip" data-reel="1"></div></div>
-      <div class="reel-window"><div class="reel-strip" data-reel="2"></div></div>
+  <section class="machine-stage" aria-label="Interactive wedding slot machine">
+    <div class="machine">
+      <div class="arch"><span>Save the date</span></div>
+      <div class="lights" aria-hidden="true"><span class="light"></span><span class="light"></span><span class="light"></span></div>
+      <p class="machine-title">A little wedding magic</p>
+      <div class="reels-frame" aria-label="Three photo reels">
+        <div class="reel-window"><div class="reel-strip" data-reel="0"></div></div>
+        <div class="reel-window"><div class="reel-strip" data-reel="1"></div></div>
+        <div class="reel-window"><div class="reel-strip" data-reel="2"></div></div>
+      </div>
+      <p class="caption">Pull the lever to reveal</p>
+      <div class="mini-controls" aria-hidden="true"><span class="mini-dot"></span><span class="mini-pill"></span><span class="mini-dot"></span></div>
+      <div class="front-panel" aria-hidden="true"><span class="gold-button"></span></div>
+      <div class="machine-foot" aria-hidden="true"></div>
+      <button class="lever-hit" id="lever" type="button" aria-label="Pull the lever down">
+        <span class="lever-shaft"></span><span class="lever-knob"></span><span class="lever-base"></span>
+      </button>
     </div>
-    <p class="machine-caption">Pull the lever to reveal</p>
-     <div class="machine-controls" aria-hidden="true"><span class="mini-light"></span><span class="mini-control"></span><span class="mini-light"></span></div>
-     <div class="front-panel" aria-hidden="true"><span class="front-panel-button"></span></div>
-     <div class="control-row">
-      <button class="lever-button" id="lever" aria-label="Pull the lever" title="Pull the lever down"> </button>
-      <button class="spin-button" id="spin">Spin the reels ✦</button>
-    </div>
+    <button class="spin-button" id="spin" type="button">Spin the reels ✦</button>
   </section>
   <p class="hint">Three reels, two hearts, one forever.</p>
   <p class="footer">Save the date · 19 July 2027</p>
@@ -94,15 +124,16 @@ h1{font-size:clamp(2.1rem,8vw,3rem);font-weight:normal;line-height:1;margin:0;co
       <h3>Save our date to your calendar</h3>
       <p>Add our wedding date to your phone calendar.</p>
       <div class="calendar-links">
-        <a class="calendar-button" id="googleCalendar" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.">Google Calendar</a>
+        <a class="calendar-button" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Meera%20%26%20Dhiren%27s%20Wedding&amp;dates=20270719%2F20270720&amp;details=Please%20save%20the%20date%20for%20Meera%20%26%20Dhiren%27s%20wedding.">Google Calendar</a>
         <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Apple / iPhone</a>
-        <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Android / Save to calendar</a>
+        <a class="calendar-button" href="wedding.ics" download="Meera-and-Dhiren-Wedding.ics">Android / Save to Calendar</a>
       </div>
-      <p class="calendar-note">On Android, the calendar file opens or downloads for import into a compatible calendar app. Websites cannot force every phone to open its native calendar directly.</p>
+      <p class="calendar-note">On Android, the calendar file opens or downloads for import into a compatible calendar app.</p>
     </div>
-    <button class="replay" id="replay">Play again ✦</button>
+    <button class="replay" id="replay" type="button">Play again ✦</button>
   </div>
 </div>
+
 <script>
 const photos = [
   "assets/beach-dance.jpeg",
@@ -117,6 +148,7 @@ const lever = document.getElementById("lever");
 const spinButton = document.getElementById("spin");
 const reveal = document.getElementById("reveal");
 let busy = false;
+let spinTimer = null;
 
 function item(src, alt) {
   const el = document.createElement("div");
@@ -129,16 +161,16 @@ function item(src, alt) {
 function fillReels() {
   strips.forEach((strip, index) => {
     strip.innerHTML = "";
-    const sequence = [...photos, ...photos, ...photos];
-    sequence.forEach((src, n) => strip.appendChild(item(src, `Couple photo ${n+1}`)));
+    const sequence = [...photos, ...photos, ...photos, ...photos, ...photos];
+    sequence.forEach((src, n) => strip.appendChild(item(src, `Meera and Dhiren photo ${n + 1}`)));
     strip.style.transition = "none";
-    const itemHeight = 72;
+    const itemHeight = strip.querySelector(".reel-item").getBoundingClientRect().height;
     strip.style.transform = `translateY(-${index * itemHeight}px)`;
   });
 }
 function confetti() {
   const colors = ["#c6a15b","#f7e4a5","#d99da3","#fff3dc","#b7787d"];
-  for(let i=0;i<75;i++){
+  for(let i=0;i<65;i++){
     const piece=document.createElement("i");
     piece.className="confetti";
     piece.style.left=Math.random()*100+"vw";
@@ -150,31 +182,50 @@ function confetti() {
   }
 }
 function spin() {
-  if(busy) return;
-  busy=true; reveal.classList.remove("show");
-  lever.disabled=true; spinButton.disabled=true; lever.classList.add('pulled');
+  if (busy) return;
+  busy = true;
+  reveal.classList.remove("show");
+  lever.classList.add("pulled");
+  lever.disabled = true;
+  spinButton.disabled = true;
+
   const itemHeight = strips[0].querySelector(".reel-item").getBoundingClientRect().height;
-  strips.forEach((strip,index)=>{
-    const count = 12 + index*3 + Math.floor(Math.random()*4);
-    const maxIndex = photos.length*3 - 1;
-    const landing = Math.min(count, maxIndex);
+  const winningPhoto = Math.floor(Math.random() * photos.length);
+  strips.forEach((strip, index) => {
     const initialOffset = index * itemHeight;
-    strip.style.transition="none";
-    strip.style.transform=`translateY(-${initialOffset}px)`;
+    const currentY = -initialOffset;
+    const repeatedTarget = photos.length * 3 + winningPhoto;
+    const landing = repeatedTarget;
+    strip.style.transition = "none";
+    strip.style.transform = `translateY(${currentY}px)`;
     void strip.offsetHeight;
-    strip.style.transition=`transform ${1.5+index*.48}s cubic-bezier(.12,.72,.16,1)`;
-    strip.style.transform=`translateY(-${landing*itemHeight}px)`;
+    strip.style.transition = `transform ${1.55 + index * .42}s cubic-bezier(.12,.72,.16,1)`;
+    strip.style.transform = `translateY(-${landing * itemHeight}px)`;
   });
-  setTimeout(()=>{
-    busy=false; lever.disabled=false; spinButton.disabled=false; lever.classList.remove('pulled');
-    reveal.classList.add("show"); confetti();
-  },2700);
+
+  spinTimer = setTimeout(() => {
+    busy = false;
+    lever.disabled = false;
+    spinButton.disabled = false;
+    lever.classList.remove("pulled");
+    reveal.classList.add("show");
+    confetti();
+  }, 2900);
 }
-lever.addEventListener("click",spin);
-spinButton.addEventListener("click",spin);
-document.getElementById("replay").addEventListener("click",()=>{reveal.classList.remove("show");});
-reveal.addEventListener("click",e=>{if(e.target===reveal) reveal.classList.remove("show");});
-document.addEventListener("keydown",e=>{if(e.key==="Escape") reveal.classList.remove("show");});
+lever.addEventListener("click", spin);
+spinButton.addEventListener("click", spin);
+document.getElementById("replay").addEventListener("click", () => {
+  reveal.classList.remove("show");
+});
+reveal.addEventListener("click", e => {
+  if (e.target === reveal) reveal.classList.remove("show");
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") reveal.classList.remove("show");
+});
+window.addEventListener("resize", () => {
+  if (!busy) fillReels();
+});
 fillReels();
 </script>
 </body>
