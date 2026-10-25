@@ -53,7 +53,8 @@ h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:normal;line-height:1.03;margin:0
 .lever-button:active{transform:translateY(3px)}
 .lever-button:before{content:"";position:absolute;width:6px;height:72px;background:linear-gradient(90deg,#9b713c,#f6dfa0,#9c7038);left:6px;top:14px;border:1px solid #986a30;border-radius:5px;transform-origin:top center;transform:rotate(-7deg);z-index:-1;transition:transform .25s}
 .lever-button:after{content:"";position:absolute;width:22px;height:28px;left:-2px;top:75px;border:2px solid #a77c3e;border-radius:6px;background:linear-gradient(#f4d99a,#b78943)}
-.lever-button.pulled:before{transform:rotate(24deg)}
+.lever-button.pulled{transform:translateY(28px)}
+.lever-button.pulled:before{transform:rotate(-7deg)}
 .spin-button{
   margin-top:15px;border:1px solid #b38b4e;border-radius:999px;padding:14px 23px;background:linear-gradient(#fff8e8,#e9cf91);
   color:#70474b;font: bold .78rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
