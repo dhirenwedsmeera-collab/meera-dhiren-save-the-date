@@ -52,12 +52,12 @@ h1 span{color:var(--gold)}
  appearance:none;position:absolute;right:-24px;top:100px;width:42px;height:176px;padding:0;border:0;background:transparent;cursor:pointer;z-index:8;
  transform:translateY(0);transform-origin:top center;transition:transform .28s cubic-bezier(.2,.8,.3,1);
 }
-.lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:center top;transform:rotate(0deg);transition:transform .3s cubic-bezier(.2,.8,.3,1)}
+.lever-shaft{position:absolute;left:19px;top:14px;width:5px;height:117px;border:1px solid #95672f;border-radius:5px;background:linear-gradient(90deg,#8f6634,#f9e6a7 48%,#a5783b);transform-origin:center bottom;transform:scaleY(1);transition:transform .3s cubic-bezier(.2,.8,.3,1)}
 .lever-knob{position:absolute;left:10px;top:0;width:23px;height:23px;border:2px solid #b66d78;border-radius:50%;background:radial-gradient(circle at 30% 25%,#f5e4b5,#d1b878 57%,#9b8756);box-shadow:0 2px 3px #754d3644;transition:none}
 .lever-base{position:absolute;left:12px;top:127px;width:20px;height:28px;border:2px solid #9d733a;border-radius:3px;background:linear-gradient(#f5dfa1,#b7823e);box-shadow:inset 0 0 0 2px #e6c274;transition:transform .3s cubic-bezier(.2,.8,.3,1)}
 .lever-hit.pulled{transform:translateY(0)}
-.lever-hit.pulled .lever-shaft{transform:rotate(-18deg)}
-.lever-hit.pulled .lever-knob{transform:translate(-37px, 4px)}
+.lever-hit.pulled .lever-shaft{transform:scaleY(.62)}
+.lever-hit.pulled .lever-knob{transform:translateY(44px)}
 .lever-hit.pulled .lever-base{transform:translateY(0)}
 .spin-button{display:block;margin:28px auto 0;position:relative;z-index:2;border:1px solid #b58b4d;border-radius:999px;padding:13px 23px;background:linear-gradient(#fffdf5,#eee4c9);color:#66735f;font:bold .7rem Georgia,serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #c7b082}
 .spin-button:active{transform:translateY(2px);box-shadow:0 2px 0 #c7b082}
